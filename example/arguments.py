@@ -43,6 +43,9 @@ parser.add_argument("--action-space", type=list,
                     default=[(0, 1), (1, 0), (0, -1), (-1, 0), (0, 0)])  # down, right, up, left, stay
 parser.add_argument("--debug", type=bool, default=False)
 parser.add_argument("--animation-interval", type=float, default=0.2)
+
+# added by myself
+parser.add_argument('--alg', type=str, default='value_iter')
 ## ==================== End of Advanced settings ====================
 
 
