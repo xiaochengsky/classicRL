@@ -44,6 +44,7 @@ def value_iter(env, gamma=0.9, theta=1e-5) -> Tuple[np.array, np.array]:
             q_value = []
 
             for a, action in enumerate(env.action_space):
+                # model-base, like look up the table for given p(s|a)
                 next_state, reward = env.get_next_state_reward(cur_state, action)
                 # q = immediate reward + v[s']
                 q_value.append(reward + gamma * state_values[next_state])

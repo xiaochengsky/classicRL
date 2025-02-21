@@ -40,6 +40,7 @@ def menton_calro_basic(env, gamma=0.9, episodes=100, iteration=3):
                 tmp_state = state
                 # mc base
                 for e in range(episodes):
+                    # model-free, it doesn't like look up the table for p(s|a), just mock a reality interaction env
                     next_state, reward = env.get_next_state_reward(tmp_state, action)
                     q_value += (gamma ** e) * reward
                     tmp_state = (next_state % env.env_size[0], next_state // env.env_size[0])
