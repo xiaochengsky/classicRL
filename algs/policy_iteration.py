@@ -10,10 +10,12 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import numpy as np
+from typing import Tuple
+
 from example.arguments import args
 
 
-def policy_iter(env, gamma=0.9, theta=1e-5):
+def policy_iter(env, gamma=0.9, theta=1e-5) -> Tuple[np.array, np.array]:
     """
     :param env:
     :param gamma:
