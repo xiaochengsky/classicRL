@@ -9,10 +9,12 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import numpy as np
+from typing import Tuple
+
 from example.arguments import args
 
 
-def value_iter(env, gamma=0.9, theta=1e-5):
+def value_iter(env, gamma=0.9, theta=1e-5) -> Tuple[np.array, np.array]:
     """
     value iteration for solving the Bellman Optimization Equation (BOE)
     :param env: interaction env
