@@ -8,3 +8,5 @@ from .value_iteration import value_iter
 from .policy_iteration import policy_iter
 from .monte_carlo import *
 from .sarsa import *
+from .q_learning import *
+from .policy_gradient import *
